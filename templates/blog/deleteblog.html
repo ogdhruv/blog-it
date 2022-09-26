@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+{% block main %}
+<div class=" flex text-white text-center">
+<form action="" method="post">{% csrf_token %}
+<p>Are you sure you want to delete "{{ post.title }}"?</p>
+<input class="cursor-pointer" type="submit" value="Confirm">
+</form>
+</div>
+</div>
+{% endblock main %}

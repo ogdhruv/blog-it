@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% block main %}
+<nav class="flex items-center justify-between max-w-3xl p-4 mx-auto">
+  <a class="inline-flex items-center justify-center w-10 h-10 bg-[#e53170] rounded-lg" href="{% url 'blog' %}">
+    👋
+  </a>
+
+  <ul class="flex items-center gap-2 text-sm font-medium text-[#fffffe]">
+    <li class="hidden lg:block">
+      <a class="px-3 py-2 rounded-lg" href="/"> Home </a>
+    </li>
+
+    <li>
+      <a class="inline-flex items-center px-3 py-2 rounded-lg" href="{% url 'newpost' %}">
+        Add Blog
+      </a>
+    </li>
+  </ul>
+</nav>
+
+{% block navbar %}
+{% endblock navbar %}
+
+{% endblock main %}
+

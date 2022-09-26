@@ -1,0 +1,42 @@
+{% extends "navbar.html" %}
+{% block navbar %}
+
+{% for blog in all_blogs %}
+<div class="flex items-center justify-between max-w-3xl p-4 mx-auto rounded-lg ">
+    <div
+        class="p-6 max-w-3xl rounded-lg border border-gray-200 shadow-md bg-[#7f5af0]">
+        <a href="{% url 'post_detail' blog.pk %}">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#fffffe]">{{blog.title}}</h5>
+        </a>
+        <p class="mb-3 font-normal text-[#010101] ">{{ blog.body|truncatewords:60 }}</p>
+        <a href="{% url 'post_detail' blog.pk %}"
+            class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-[#2cb67d] rounded-lg focus:ring-blue-300">
+            Read more
+            <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </a>
+    </div>
+</div>
+{% endfor %}
+  
+{% if is_paginated %}
+<div class="flex max-w-3xl p-4 mx-auto ">
+    <span class="text-center">
+        {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}"" class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-500 bg-[#7f5af0] rounded-lg border border-gray-300 ">
+            Previous
+          </a>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}" class="flex items-center py-2 px-4 text-sm font-medium text-gray-500 bg-[#7f5af0] rounded-lg border border-gray-300 ">
+            Next
+          </a>
+        {% endif %}
+    </span>
+</div>
+{% endif %}
+{% endblock navbar %}
