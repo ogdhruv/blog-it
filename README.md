@@ -47,6 +47,9 @@ A step by step list of commands / guide that informs how to run an instance of t
 
 > ⚠️ Note: If you do not know how to configure  `tailwindcss` with `django`. [click-here](https://django-tailwind.readthedocs.io/en/latest/installation.html)
 
+## Screenshot
+![admin](images/admin.png)
+
 ## Contribution 🤝
 - Want to contribute? Feel free to open a PR! 😸
 
