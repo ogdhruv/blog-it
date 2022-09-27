@@ -1,10 +1,18 @@
 {% extends 'main.html' %}
 {% block main %}
-<div class=" flex text-white text-center">
-<form action="" method="post">{% csrf_token %}
-<p>Are you sure you want to delete "{{ post.title }}"?</p>
-<input class="cursor-pointer" type="submit" value="Confirm">
-</form>
-</div>
+<div class="container mt-3">
+    <article class="message is-danger">
+        <div class="message-header">
+          <p>Danger</p>
+          <button class="delete" aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+          If the blog is deleted, we won't be able to help you recover it.<br><br>
+          Are your sure, you want to delete: "{{post.title}}".
+        </div>
+      </article>
+      <form action="" method="post">{% csrf_token %}
+        <input class="button is-danger" type="submit" value="Yes, i am sure.">
+        </form>
 </div>
 {% endblock main %}
