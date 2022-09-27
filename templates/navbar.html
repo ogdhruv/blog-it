@@ -1,25 +1,29 @@
 {% extends 'main.html' %}
 {% block main %}
-<nav class="flex items-center justify-between max-w-3xl p-4 mx-auto">
-  <a class="inline-flex items-center justify-center w-10 h-10 bg-[#e53170] rounded-lg" href="{% url 'blog' %}">
-    👋
-  </a>
+<nav class="navbar is-info has-shadow" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="{% url 'blog' %}">👋 <strong>Home</strong> </a>
 
-  <ul class="flex items-center gap-2 text-sm font-medium text-[#fffffe]">
-    <li class="hidden lg:block">
-      <a class="px-3 py-2 rounded-lg" href="/"> Home </a>
-    </li>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
 
-    <li>
-      <a class="inline-flex items-center px-3 py-2 rounded-lg" href="{% url 'newpost' %}">
-        Add Blog
-      </a>
-    </li>
-  </ul>
+    <div id="navbarBasicExample" class="navbar-menu">
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-light" href="{% url 'newpost' %}">Add Blog
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </nav>
-
 {% block navbar %}
 {% endblock navbar %}
 
 {% endblock main %}
-
