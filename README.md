@@ -2,13 +2,13 @@
 
 > A simple django blogging web application. ✅️
 
-![demo](images/blog-it.png)
+![demo](images/front-page.png)
 
 
 ## Requirements  (Prerequisites) 📝
 Tools and packages required to successfully install this project.
-* Python3.7 🐍 and up [Install](https://python.org) 
-* npm [Install](https://github.com/nvm-sh/nvm)
+* Python 3.7^ 🐍 [Install](https://python.org) 
+
 
 ## Running Demo 🔨
 A step by step list of commands / guide that informs how to run an instance of this project in linux.
@@ -23,10 +23,6 @@ A step by step list of commands / guide that informs how to run an instance of t
 
  $ pip install -r requirements.txt
 
- $ cd jstools
-
- $ npm run build
-
  $ python ../manage.py makemigrations
 
  $ python ../manage.py runserver
@@ -35,7 +31,7 @@ A step by step list of commands / guide that informs how to run an instance of t
 
 ## Features 🌟
 
-* Used Tailwind CSS to make it 100% responsive
+* Used Bulma to make it 100% responsive
 * Used Django for Back-end Development
 * Made a simple CRUD-based blogging page.
 
@@ -43,11 +39,22 @@ A step by step list of commands / guide that informs how to run an instance of t
 ## Tech Stack / Built With 📜️
 
 1. [Django](https://www.djangoproject.com/)- A web framework
-2. [Tailwind CSS](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
+2. [Bulma.io](https://https://bulma.io/) - The modern CSS framework that just works.
 
-> ⚠️ Note: If you do not know how to configure  `tailwindcss` with `django`. [click-here](https://django-tailwind.readthedocs.io/en/latest/installation.html)
+> ⚠️ Note: If you do not know how to configure  `bulma` with your `template`. [click-here](https://bulma.io/documentation/overview/start/)
 
 ## Screenshot
+
+* **Single blog view**
+
+![Blog View](images/blog-page.png)
+
+* **Delete post**
+
+![](images/deletepost.png)
+
+* **Admin panel**
+
 ![admin](images/admin.png)
 
 ## Contribution 🤝
