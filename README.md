@@ -53,10 +53,6 @@ A step by step list of commands / guide that informs how to run an instance of t
 
 ![](images/deletepost.png)
 
-* **Admin panel**
-
-![admin](images/admin.png)
-
 ## Contribution 🤝
 - Want to contribute? Feel free to open a PR! 😸
 
